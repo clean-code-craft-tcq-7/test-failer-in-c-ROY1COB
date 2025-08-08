@@ -7,7 +7,7 @@ const char* size(int cms) {
         return "S";
     } else if (cms < 42) {
         return "M";
-    } else if (cms>=42 && cms<90)
+    } else if (cms>=42 && cms<90){
         return "L";
     }else
     {
@@ -23,7 +23,7 @@ int testTshirtSize() {
     assert(size(38) == "M");
     assert(size(40) == "M");
     assert(size(43) == "L");
-    assert(size(200) == "Error, enter a valid size") // max allowed shoulder length is 90cm
+    assert(size(200) == "Error, enter a valid size"); // max allowed shoulder length is 90cm
     printf("All is well (maybe!)\n");
     return 0;
 }
