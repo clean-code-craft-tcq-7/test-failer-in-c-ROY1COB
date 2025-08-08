@@ -1,19 +1,17 @@
 #include <stdio.h>
 #include <assert.h>
 
-char size(int cms) {
-    char sizeName = '\0';
-    if (cms > 18 && cms<38) {
-        sizeName = 'S';
+const char* size(int cms) {
+       if (cms > 18 && cms<38) {
+        return 'S';
     } else if (cms < 42) {
-        sizeName = 'M';
+        return 'M';
     } else if (cms>=42 && cms<90)
-        sizeName = 'L';
+        return 'L';
     }else
     {
-        sizeName = 'Error, enter a valid size'
+        return 'Error, enter a valid size';
     }
-    return sizeName;
 }
 
 int testTshirtSize() {
